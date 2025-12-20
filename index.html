@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>לביא נעילה מתקדמת – מנעולן מומחה 24/7</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="לביא נעילה מתקדמת – שירותי מנעולנות בכל סוגי הפריצות, החלפת צילינדרים, מנעול כספת עליון, מנעול חכם ושירות חירום 24/7 ברמלה, לוד, ראשון לציון, רחובות, מזכרת בתיה, נס ציונה, קריית עקרון, שוהם, מודיעין, גזר, באר יעקב ובית דגן." />
+
+  <!-- גופן עברי -->
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #1565c0;
+      --primary-dark: #0d47a1;
+      --bg: #f5f7fb;
+      --text: #0b1020;
+      --muted: #6b7280;
+      --card-bg: #ffffff;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Heebo", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #dbeafe 0, #f5f7fb 55%, #eef2ff 100%);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 17px; /* כתב גדול יותר לגוף האתר */
+    }
+
+    img { max-width: 100%; display: block; }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+      border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-wrap {
+      width: 60px;
+      height: 60px;
+      border-radius: 999px;
+      background: radial-gradient(circle at top, #ffffff, #bfdbfe);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 25px rgba(15, 23, 42, 0.18);
+      overflow: hidden;
+    }
+
+    .logo-wrap img {
+      width: 90%;
+      height: 90%;
+      object-fit: contain;
+    }
+
+    .brand-title {
+      font-weight: 700;
+      font-size: 22px;
+      letter-spacing: 0.03em;
+    }
+
+    .brand-subtitle {
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 15px;
+    }
+
+    .nav-links a {
+      padding: 7px 12px;
+      border-radius: 999px;
+      transition: background 0.18s ease, color 0.18s ease;
+    }
+
+    .nav-links a:hover {
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--primary-dark);
+    }
+
+    .nav-cta { display: none; }
+
+    /* HERO */
+    .hero { padding: 34px 0 42px; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+      gap: 32px;
+      align-items: center;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.06);
+      color: var(--primary-dark);
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .hero-pill span {
+      display: inline-flex;
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.18);
+      font-size: 13px;
+    }
+
+    .hero-title {
+      font-size: clamp(32px, 5.2vw, 44px);
+      line-height: 1.15;
+      margin-bottom: 14px;
+      color: var(--primary-dark);
+    }
+
+    .hero-subtitle {
+      font-size: 17px;
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+      font-size: 14px;
+    }
+
+    .hero-badge {
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.03);
+      border: 1px solid rgba(148,163,184,0.6);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 22px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 500;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+      box-shadow: 0 10px 20px rgba(15,23,42,0.25);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #1e40af, #2563eb);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 22px rgba(15,23,42,0.3);
+    }
+
+    .btn-outline {
+      background: rgba(255,255,255,0.9);
+      color: var(--primary-dark);
+      border: 1px solid rgba(148,163,184,0.7);
+      box-shadow: none;
+    }
+
+    .btn-outline:hover {
+      background: #e0ecff;
+      box-shadow: 0 8px 18px rgba(15,23,42,0.12);
+    }
+
+    .hero-note {
+      font-size: 14px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-note strong { color: var(--primary-dark); }
+
+    .hero-note-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 12px rgba(34,197,94,0.8);
+    }
+
+    .hero-card {
+      background: linear-gradient(145deg, rgba(255,255,255,0.98), rgba(219,234,254,0.9));
+      border-radius: 32px;
+      padding: 18px 18px 20px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 12px;
+    }
+
+    .hero-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .avatar {
+      width: 70px;
+      height: 70px;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 2px solid rgba(59,130,246,0.6);
+      box-shadow: 0 8px 18px rgba(15,23,42,0.25);
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-card-header-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .hero-card-header-text h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .hero-card-header-text span {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .hero-card-body { font-size: 15px; color: var(--text); }
+
+    .hero-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+      font-size: 12px;
+    }
+
+    .hero-card-tag {
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--primary-dark);
+    }
+
+    .hero-card-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 13px;
+      margin-top: 8px;
+      border-top: 1px dashed rgba(148,163,184,0.7);
+      padding-top: 8px;
+    }
+
+    .hero-card-footer strong { color: var(--primary-dark); }
+
+    /* SECTIONS */
+    section { padding: 28px 0; }
+
+    .section-title {
+      font-size: 24px;
+      margin-bottom: 6px;
+      color: var(--primary-dark);
+    }
+
+    .section-subtitle {
+      font-size: 16px;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .grid-3 {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(148,163,184,0.3);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 15px;
+    }
+
+    .card-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      background: rgba(37,99,235,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 18px;
+      color: var(--primary-dark);
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .card ul {
+      margin: 6px 0 0;
+      padding-right: 18px;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    /* גלריית עבודות עם תמונות */
+    .gallery-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+    }
+
+    .gallery-item {
+      background: var(--card-bg);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      border: 1px solid rgba(148,163,184,0.35);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .gallery-img-wrap {
+      height: 160px;
+      overflow: hidden;
+    }
+
+    .gallery-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-caption {
+      padding: 10px 12px 12px;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .gallery-caption strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--primary-dark);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+      gap: 18px;
+      align-items: center;
+    }
+
+    .pill-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+      font-size: 15px;
+    }
+
+    .pill-list li {
+      background: rgba(255,255,255,0.9);
+      border-radius: 999px;
+      padding: 10px 14px;
+      box-shadow: 0 8px 18px rgba(15,23,42,0.08);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pill-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      background: rgba(37,99,235,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      color: var(--primary-dark);
+    }
+
+    .about-photo {
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 2px solid rgba(37,99,235,0.3);
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ביקורות */
+    .reviews-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+    }
+
+    .review-card {
+      background: var(--card-bg);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 16px 16px 14px;
+      border: 1px solid rgba(148,163,184,0.3);
+      font-size: 15px;
+    }
+
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .review-name {
+      font-weight: 600;
+      color: var(--primary-dark);
+    }
+
+    .review-stars {
+      color: #fbbf24;
+      font-size: 16px;
+    }
+
+    .review-city {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    /* יצירת קשר */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2.3fr) minmax(0, 2fr);
+      gap: 18px;
+    }
+
+    .contact-details { font-size: 15px; color: var(--text); }
+
+    .contact-details p { margin: 6px 0; }
+
+    .contact-details strong { color: var(--primary-dark); }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      font-size: 15px;
+    }
+
+    .contact-list li {
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-list span.icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: rgba(37,99,235,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+    }
+
+    form {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px 16px 18px;
+      border: 1px solid rgba(148,163,184,0.35);
+      display: grid;
+      gap: 10px;
+      font-size: 15px;
+    }
+
+    label {
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--primary-dark);
+    }
+
+    input, textarea {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid rgba(148,163,184,0.7);
+      padding: 8px 10px;
+      font-family: inherit;
+      font-size: 15px;
+      outline: none;
+      transition: border 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      background: rgba(255,255,255,0.95);
+    }
+
+    input:focus, textarea:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 1px rgba(37,99,235,0.25);
+      background: #fff;
+    }
+
+    textarea { resize: vertical; min-height: 90px; }
+
+    footer {
+      text-align: center;
+      padding: 16px;
+      font-size: 13px;
+      color: var(--muted);
+      border-top: 1px solid rgba(148,163,184,0.4);
+      margin-top: 18px;
+      background: rgba(248,250,252,0.9);
+    }
+
+    footer a { color: var(--primary-dark); font-weight: 500; }
+
+    /* כפתור וואטסאפ צף */
+    .whatsapp-float {
+      position: fixed;
+      left: 18px;
+      bottom: 18px;
+      z-index: 50;
+    }
+
+    .whatsapp-float a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #25d366;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 999px;
+      box-shadow: 0 18px 32px rgba(22, 163, 74, 0.5);
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .whatsapp-float .circle {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+    }
+
+    .whatsapp-float a:hover { transform: translateY(-1px); }
+
+    /* רספונסיביות */
+    @media (max-width: 980px) {
+      .hero-grid,
+      .two-col,
+      .contact-grid,
+      .grid-3,
+      .gallery-grid,
+      .reviews-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-card { order: -1; }
+    }
+
+    @media (max-width: 870px) {
+      .nav-links { display: none; }
+      .nav-cta { display: inline-flex; }
+      .hero { padding-top: 24px; }
+    }
+
+    @media (max-width: 520px) {
+      .whatsapp-float a span.text { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- כפתור וואטסאפ צף -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/972559495911" target="_blank" rel="noopener">
+      <div class="circle">💬</div>
+      <span class="text">צ’אט מהיר בוואטסאפ</span>
+    </a>
+  </div>
+
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <div class="nav-left">
+          <div class="logo-wrap">
+            <!-- הלוגו – שמור בשם logo.png -->
+            <img src="logo.png" alt="לוגו לביא נעילה מתקדמת">
+          </div>
+          <div>
+            <div class="brand-title">לביא נעילה מתקדמת</div>
+            <div class="brand-subtitle">מנעולן מוסמך • שירותי חירום 24/7</div>
+          </div>
+        </div>
+
+        <div class="nav-links">
+          <a href="#services">שירותים</a>
+          <a href="#gallery">גלריית עבודות</a>
+          <a href="#reviews">ביקורות</a>
+          <a href="#contact">יצירת קשר</a>
+          <a href="tel:0559495911">📞 055-949-5911</a>
+        </div>
+
+        <a class="btn btn-primary nav-cta" href="tel:0559495911">חייג עכשיו</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-pill">
+            <span>🔒</span>
+            מנעולן נייד – מגיע עד אליך, בכל שעה
+          </div>
+
+          <h1 class="hero-title">
+            נתקעת מחוץ לבית או לרכב?<br>
+            <span style="white-space: nowrap;">לביא נעילה מתקדמת</span> בדרך אליך.
+          </h1>
+
+          <p class="hero-subtitle">
+            פריצות ללא נזק, החלפת צילינדרים איכותיים, התקנת מנעול כספת עליון, נעילה חכמה ושירות
+            מקצועי עם ניסיון משטרתי רב־שנים בתחום הביטחון וההגנה על הבית.
+          </p>
+
+          <div class="hero-badges">
+            <span class="hero-badge">✅ פריצות דלתות ודלתות ביטחון</span>
+            <span class="hero-badge">✅ פריצת רכבים ללא נזק</span>
+            <span class="hero-badge">✅ מנעול כספת עליון וחיזוק דלת</span>
+            <span class="hero-badge">✅ מנעולים חכמים ופתרונות מתקדמים</span>
+            <span class="hero-badge">✅ שירות מהיר ואמין 24/7</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/972559495911" target="_blank" rel="noopener">
+              💬 כתבו לי בוואטסאפ
+            </a>
+            <a class="btn btn-outline" href="tel:0559495911">
+              📞 שיחת טלפון ישירה
+            </a>
+          </div>
+
+          <div class="hero-note">
+            <div class="hero-note-dot"></div>
+            <span><strong>מנעולן מוסמך</strong> עם רקע ארוך במשטרת ישראל – שירות עם אחריות מלאה וביטחון ללקוח.</span>
+          </div>
+        </div>
+
+        <!-- כרטיס עם תמונת פרופיל -->
+        <aside class="hero-card" aria-label="פרופיל מנעולן">
+          <div class="hero-card-header">
+            <div class="avatar">
+              <!-- התמונה האישית שלך – owner.jpg -->
+              <img src="owner.jpg" alt="נוריאל – מנעולן לביא נעילה מתקדמת">
+            </div>
+            <div class="hero-card-header-text">
+              <h2>נוריאל, לביא נעילה מתקדמת</h2>
+              <span>מנעולן נייד | מומחה לאבטחת בתים ודירות</span>
+            </div>
+          </div>
+
+          <div class="hero-card-body">
+            אני מנעולן מוסמך עם ניסיון של שנים בשטח ובמערכות הביטחון. השירות שלי משלב מקצועיות,
+            אמינות ושקיפות מלאה – משלב הייעוץ ועד סיום העבודה, כדי שתישארו עם תחושת ביטחון אמיתית.
+            <div class="hero-card-tags">
+              <span class="hero-card-tag">⏱️ הגעה מהירה</span>
+              <span class="hero-card-tag">💯 שקיפות במחיר</span>
+              <span class="hero-card-tag">🛡️ ציוד ונעילה מתקדמים</span>
+            </div>
+          </div>
+
+          <div class="hero-card-footer">
+            <span>📍 אזור שירות: רמלה, לוד, ראשון לציון, רחובות, מזכרת בתיה, נס ציונה, קריית עקרון, שוהם, מודיעין, מועצה אזורית גזר, באר יעקב, בית דגן.</span>
+            <span><strong>זמין עכשיו</strong> – התקשרו: <a href="tel:0559495911">055-949-5911</a></span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- שירותים -->
+    <section id="services">
+      <div class="container">
+        <h2 class="section-title">שירותי המנעולנות</h2>
+        <p class="section-subtitle">
+          כל פתרונות הנעילה לבית, לדירה, לרכב ולמשרד – עם דגש על אמינות, מקצועיות והגנה מקסימלית מפני פריצות.
+        </p>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-icon">🚪</div>
+            <h3>פריצת דלתות ללא נזק</h3>
+            <p>
+              פריצה מקצועית לדלתות פלדה, עץ, ממ"ד ודלתות כניסה – תוך שמירה על שלמות הדלת והמשקוף.
+            </p>
+            <ul>
+              <li>אובדן מפתחות / דלת טרוקה</li>
+              <li>דלת שננעלה מבפנים</li>
+              <li>פתיחת דלתות לזקנים, ילדים וניצולי שואה</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🔐</div>
+            <h3>החלפת צילינדר ושדרוג אבטחה</h3>
+            <p>
+              מגוון צילינדרים ברמות אבטחה שונות – התאמה אישית לפי סוג הדלת ורמת ההגנה הנדרשת.
+            </p>
+            <ul>
+              <li>החלפת צילינדר אחרי מעבר דירה</li>
+              <li>צילינדרים נגד פריצה שקטה וקדיחה</li>
+              <li>כרטיס שכפול מוגן ותיעוד מפתחות</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🚗</div>
+            <h3>פריצת רכבים ללא נזק</h3>
+            <p>
+              פתיחת רכבים נעולים במהירות, תוך שימוש בכלים מקצועיים שמונעים נזק לדלת ולמנגנון.
+            </p>
+            <ul>
+              <li>מפתח שננעל ברכב</li>
+              <li>ילד שננעל ברכב – טיפול עדין ומהיר</li>
+              <li>עבודה לפי הנהלים ובאחריות מלאה</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- גלריית עבודות – תמונות -->
+    <section id="gallery">
+      <div class="container">
+        <h2 class="section-title">גלריית עבודות – לפני ואחרי</h2>
+        <p class="section-subtitle">
+          
+        </p>
+
+        <div class="gallery-grid">
+          <!-- החלפת צילינדר -->
+          <div class="gallery-item">
+            <div class="gallery-img-wrap">
+              <!-- תמונה: החלפת צילינדר -->
+              <!-- שמור כ: cylinder.jpg -->
+              <img src="cylinder.jpg" alt="החלפת צילינדר איכותי">
+            </div>
+            <div class="gallery-caption">
+              <strong>החלפת צילינדר</strong>
+              שדרוג צילינדר ישן לצילינדר בטיחותי יותר, עם מפתח חדש וכרטיס שכפול מוגן.
+            </div>
+          </div>
+
+          <!-- פריצת רכב -->
+          <div class="gallery-item">
+            <div class="gallery-img-wrap">
+              <!-- תמונה: פריצת רכב -->
+              <!-- שמור כ: car-open.jpg -->
+              <img src="car-open.jpg" alt="פריצת רכב ללא נזק">
+            </div>
+            <div class="gallery-caption">
+              <strong>פריצת רכב ללא נזק</strong>
+              פתיחת רכב נעול בזמן קצר, תוך שמירה על הצבע והגומי סביב הדלת.
+            </div>
+          </div>
+
+          <!-- מנעול כספת עליון -->
+          <div class="gallery-item">
+            <div class="gallery-img-wrap">
+              <!-- תמונה: מנעול כספת עליון -->
+              <!-- שמור כ: top-safe.jpg -->
+              <img src="top-safe.jpg" alt="התקנת מנעול כספת עליון">
+            </div>
+            <div class="gallery-caption">
+              <strong>מנעול כספת עליון</strong>
+              התקנת מנעול כספת עליון לחיזוק הדלת והקטנת סיכויי פריצה.
+            </div>
+          </div>
+
+          <!-- מנעול חכם -->
+          <div class="gallery-item">
+            <div class="gallery-img-wrap">
+              <!-- תמונה: מנעול חכם -->
+              <!-- שמור כ: smart-lock.jpg -->
+              <img src="smart-lock.jpg" alt="מנעול חכם לבית או למשרד">
+            </div>
+            <div class="gallery-caption">
+              <strong>מנעול חכם</strong>
+              התקנת מנעול חכם – פתיחה באמצעות קוד, טלפון או טביעת אצבע, עם שליטה מלאה מי נכנס ומתי.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- למה לבחור בי -->
+    <section>
+      <div class="container two-col">
+        <div>
+          <h2 class="section-title">למה לבחור בלביא נעילה מתקדמת?</h2>
+          <p class="section-subtitle">
+            כשלוקחים מנעולן – לא מתפשרים על אמינות. אתם רוצים אדם שנכנס לבית שלכם, מטפל במנעולים ונותן לכם שקט
+            אמיתי. זה בדיוק מה שאני מביא לכל קריאה.
+          </p>
+
+          <ul class="pill-list">
+            <li>
+              <span class="pill-dot">1</span>
+              <div><strong>אמינות ושקיפות מלאה</strong> – מחיר מוסבר מראש, בלי אותיות קטנות ובלי "הפתעות".</div>
+            </li>
+            <li>
+              <span class="pill-dot">2</span>
+              <div><strong>ניסיון ביטחוני מהשטח</strong> – רקע משטרתי שמגיע איתי לכל עבודה, עם הבנה עמוקה של עולם הפריצות וההגנה.</div>
+            </li>
+            <li>
+              <span class="pill-dot">3</span>
+              <div><strong>ציוד מקצועי ורמה גבוהה</strong> – עבודה עם ציוד איכותי וצילינדרים מתקדמים בלבד.</div>
+            </li>
+            <li>
+              <span class="pill-dot">4</span>
+              <div><strong>יחס אישי וסבלני</strong> – הסבר על כל שלב, המלצות על שיפור האבטחה והתאמה לצרכים שלך.</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="about-photo">
+          <img src="owner.jpg" alt="נוריאל – מנעולן לביא נעילה מתקדמת בשטח">
+        </div>
+      </div>
+    </section>
+
+    <!-- אודות -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">קצת עליי</h2>
+        <p class="section-subtitle">
+          נעים מאוד, אני נוריאל – בעל העסק <strong>לביא נעילה מתקדמת</strong>. אחרי שנים ארוכות בשירות משטרתי,
+          כולל התמודדות עם פריצות ואירועים מורכבים, החלטתי להביא את הידע והניסיון הזה לתוך הבית של כל לקוח.
+        </p>
+
+        <div class="card">
+          <p>
+            אני מאמין שעבודה טובה במנעולנות היא שילוב בין טכניקה מקצועית, ציוד איכותי ויחס אנושי. כשאני מגיע אליך,
+            אני רואה מול עיניי קודם כל את הביטחון של המשפחה שלך. לכן, בכל קריאה אציע לא רק פתרון לתקלה,
+            אלא גם המלצות לשיפור האבטחה ולהקטנת סיכויי פריצה בעתיד.
+          </p>
+          <p>
+            אני זמין לשאלות גם אחרי שהעבודה מסתיימת, כדי שתהיה רגוע שיש לך למי לפנות – בכל שעה.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ביקורות -->
+    <section id="reviews">
+      <div class="container">
+        <h2 class="section-title">מה הלקוחות מספרים</h2>
+        <p class="section-subtitle">
+
+        </p>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-header">
+              <span class="review-name">מיכל, רחובות</span>
+              <span class="review-stars">★★★★★</span>
+            </div>
+            <div class="review-city">החלפת צילינדר ומנעול כספת עליון</div>
+            <p>
+              נוריאל הגיע מהר, הסביר בסבלנות את כל האפשרויות, עבד מסודר והשאיר הכול נקי.
+              מרגישה הרבה יותר בטוחה בבית. מומלץ בחום!
+            </p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <span class="review-name">דני, לוד</span>
+              <span class="review-stars">★★★★★</span>
+            </div>
+            <div class="review-city">פריצת רכב בלילה</div>
+            <p>
+              נתקעתי מחוץ לרכב עם המפתחות בפנים. נוריאל הגיע תוך זמן קצר, פתח בלי שום נזק לרכב
+              וגם הרגיע אותי בדרך. שירות מקצועי ואנושי.
+            </p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <span class="review-name">שני, מודיעין</span>
+              <span class="review-stars">★★★★★</span>
+            </div>
+            <div class="review-city">התקנת מנעול חכם</div>
+            <p>
+              רצינו פתרון חכם לדלת הכניסה. נוריאל המליץ על מנעול מתאים, התקין והסביר איך להשתמש.
+              מאז אנחנו פותחים עם קוד ואפליקציה – נוח ובטוח.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- יצירת קשר -->
+    <section id="contact">
+      <div class="container contact-grid">
+        <div>
+          <h2 class="section-title">צרו קשר עכשיו</h2>
+          <p class="section-subtitle">
+            נתקעת? מרגישים חוסר ביטחון בדלת? רוצים לשדרג צילינדר, להוסיף מנעול כספת או לעבור לנעילה חכמה?
+            השאירו פרטים או דברו איתי ישירות – ואשמח לעזור.
+          </p>
+
+          <div class="contact-details">
+            <p><strong>טלפון ישיר:</strong> <a href="tel:0559495911">055-949-5911</a></p>
+            <p><strong>וואטסאפ:</strong> <a href="https://wa.me/972559495911" target="_blank" rel="noopener">לחצו לשליחת הודעה</a></p>
+            <p><strong>אזורי שירות:</strong> רמלה, לוד, ראשון לציון, רחובות, מזכרת בתיה, נס ציונה, קריית עקרון, שוהם, מודיעין, מועצה אזורית גזר, באר יעקב, בית דגן.</p>
+            <p>לא בטוחים אם אני מגיע לאזור שלכם? שלחו לי הודעת וואטסאפ ואענה לכם במהירות.</p>
+
+            <ul class="contact-list">
+              <li>
+                <span class="icon">⏱️</span>
+                הגעה מהירה במקרי חירום – בהתאם לעומסי תנועה ומיקום.
+              </li>
+              <li>
+                <span class="icon">📅</span>
+                זמינות לעבודות מתואמות מראש בשעות היום והערב.
+              </li>
+              <li>
+                <span class="icon">💳</span>
+                אפשרות לתשלום במזומן, ביט ואמצעים דיגיטליים נוספים.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <form onsubmit="alert('הטופס בדוגמה סטטית – באתר אמיתי נחבר אותו למייל או לוורדפרס.'); return false;">
+            <div>
+              <label for="name">שם מלא</label>
+              <input id="name" type="text" placeholder="איך לפנות אליך?" required>
+            </div>
+            <div>
+              <label for="phone">טלפון</label>
+              <input id="phone" type="tel" placeholder="מספר ליצירת קשר" required>
+            </div>
+            <div>
+              <label for="location">אזור מגורים</label>
+              <input id="location" type="text" placeholder="עיר / יישוב">
+            </div>
+            <div>
+              <label for="message">מה קרה? איך אפשר לעזור?</label>
+              <textarea id="message" placeholder="דלת טרוקה, החלפת צילינדר, פריצת רכב, מנעול כספת, מנעול חכם ועוד..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; box-shadow: 0 10px 22px rgba(37,99,235,0.35);">
+              שלח פרטים – אחזור אליך בהקדם
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> לביא נעילה מתקדמת – כל הזכויות שמורות.
+    • בניית אתר בהתאמה אישית לנוריאל.
+  </footer>
+
+  <script>
+    // שנת זכויות יוצרים אוטומטית
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
