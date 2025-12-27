@@ -547,15 +547,13 @@
       font-size: 15px;
     }
 
-    form {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 16px 16px 18px;
-      border: 1px solid rgba(148,163,184,0.35);
-      display: grid;
-      gap: 10px;
-      font-size: 15px;
+   <form onsubmit="sendWhatsApp(event)">
+  <input type="text" id="name" placeholder="שם מלא" required>
+  <input type="text" id="phone" placeholder="טלפון לחזרה" required>
+  <textarea id="message" placeholder="מה הייתה הבעיה / איך אפשר לעזור?" required></textarea>
+  <button type="submit">שלח בוואטסאפ</button>
+</form>
+
     }
 
     label {
@@ -1054,6 +1052,22 @@
   <script>
     // שנת זכויות יוצרים אוטומטית
     document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<script>
+function sendWhatsApp(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const msg = document.getElementById('message').value;
+
+  const text = `שם: ${name}\nטלפון: ${phone}\nהודעה: ${msg}`;
+  const url = "https://wa.me/972559495911?text=" + encodeURIComponent(text);
+
+  window.open(url, "_blank");
+}
+</script>
+
+</script>
 </body>
 </html>
+
